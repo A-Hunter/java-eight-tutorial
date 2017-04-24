@@ -10,6 +10,13 @@ public class ReferenceToStaticMethod {
 
     public static void main(String args[]) {
         Collection<String> collection = new ArrayList<>();
+        collection.add("-------------");
+        collection.add("a");
+        collection.add("b");
+        collection.add("c");
+        collection.add("d");
+        collection.add("e");
+        collection.add("-------------");
         // Method 1 : Method reference
         collection.forEach(ReferenceToStaticMethod::print);
         // Method 2 : Lambda expression
