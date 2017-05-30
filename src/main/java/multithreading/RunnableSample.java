@@ -1,4 +1,4 @@
-package runnable;
+package multithreading;
 
 import consumer.person.Person;
 
