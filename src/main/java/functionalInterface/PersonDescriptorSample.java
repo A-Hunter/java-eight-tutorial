@@ -1,6 +1,6 @@
 package functionalInterface;
 
-import consumer.person.Person;
+import entities.Person;
 
 /**
  * Created by Ghazi Ennacer on 14/04/2017.

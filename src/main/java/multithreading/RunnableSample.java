@@ -1,6 +1,6 @@
 package multithreading;
 
-import consumer.person.Person;
+import entities.Person;
 
 import java.util.concurrent.TimeUnit;
 

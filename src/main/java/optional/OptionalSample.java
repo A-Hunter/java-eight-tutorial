@@ -1,6 +1,6 @@
 package optional;
 
-import consumer.person.Person;
+import entities.Person;
 
 import java.util.Optional;
 

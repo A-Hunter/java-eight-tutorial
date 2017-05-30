@@ -1,6 +1,6 @@
 package functionalInterface;
 
-import consumer.person.Person;
+import entities.Person;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

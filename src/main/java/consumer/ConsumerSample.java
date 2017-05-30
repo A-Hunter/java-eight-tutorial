@@ -1,8 +1,7 @@
 package consumer;
 
-import consumer.person.Person;
+import entities.Person;
 
-import java.util.Arrays;
 import java.util.function.Consumer;
 
 /**
