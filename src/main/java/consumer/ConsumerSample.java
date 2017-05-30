@@ -25,7 +25,8 @@ public class ConsumerSample {
     }
 
     public static void main(String[] args) {
-        Consumer<Person> consumer = consume();
-        consumer.accept(new Person("Isaac","Netero",125, "Hunter"));
+        consume().accept(
+                new Person("Sishui","Uchiha",27,"Shinobi")
+        );
     }
 }
