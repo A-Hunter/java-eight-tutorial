@@ -2,6 +2,7 @@ package consumer;
 
 import consumer.person.Person;
 
+import java.util.Arrays;
 import java.util.function.Consumer;
 
 /**
@@ -11,13 +12,7 @@ public class ConsumerSample {
 
     private static Consumer<Person>  consume(){
         return person -> {
-            String sb = person.lastName +
-                    "-" +
-                    person.firstName +
-                    "-" +
-                    person.age +
-                    "-" +
-                    person.occupation;
+            String sb = person.lastName + "-" + person.firstName + "-" + person.age + "-" + person.occupation;
             System.out.println(sb);
         };
     }
