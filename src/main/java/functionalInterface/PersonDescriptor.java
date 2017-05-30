@@ -10,6 +10,7 @@ import java.util.Date;
  */
 @FunctionalInterface
 public interface PersonDescriptor {
+
     String describe(Person person);
 
     default String currentTime() {
