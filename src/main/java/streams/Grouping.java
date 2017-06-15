@@ -14,7 +14,8 @@ public class Grouping {
 
 
     public static void main(String[] args) {
-        Map<String, List<Person>> groupByAge = getPersonsList().stream()
+        Map<String, List<Person>> groupByAge = getPersonsList()
+                .stream()
                 .collect(Collectors.groupingBy(Person::getOccupation));
         System.out.println(groupByAge);
     }
