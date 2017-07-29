@@ -20,10 +20,8 @@ public interface PersonDescriptor {
     }
 
     default String addDescription(String oldDescription, String newDescription){
-        StringBuilder sb = new StringBuilder(oldDescription);
-                sb.append(" : ")
-                  .append(newDescription)
-                  .append(".");
-        return sb.toString();
+        return oldDescription + " : " +
+                newDescription +
+                ".";
     }
 }
