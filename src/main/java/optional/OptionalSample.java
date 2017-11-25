@@ -12,13 +12,18 @@ public class OptionalSample {
         Optional<Person> optionalOfperson = Optional.of(
                 new Person("Freecss", "Ging", 45, "Hunter"))
                 .filter(person -> {
-                    if (person.age <50) {
+                    if (person.age < 50) {
                         String msg = person.lastName + " " + person.firstName + " : There is not too much information about him.";
                         System.out.println(msg);
                         return true;
                     }
                     return false;
                 });
+        optionalOfperson.ifPresent(s -> System.out.println(s.toString()));
+        Person person = optionalOfperson.get();
+        System.out.println(person.toString());
+        optionalOfperson.orElse(new Person("unknown", "unknown", 20, "unknown"));
+
 
     }
 }
