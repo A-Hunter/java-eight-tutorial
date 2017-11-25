@@ -20,10 +20,13 @@ public class OptionalSample {
                     return false;
                 });
         optionalOfperson.ifPresent(s -> System.out.println(s.toString()));
-        Person person = optionalOfperson.get();
-        System.out.println(person.toString());
-        optionalOfperson.orElse(new Person("unknown", "unknown", 20, "unknown"));
-
+        try {
+            Person person = optionalOfperson.get();
+            System.out.println(person.toString());
+            optionalOfperson.orElse(new Person("unknown", "unknown", 20, "unknown"));
+        }catch (Exception e){
+            System.out.println("Cause : " + e.getCause());
+        }
 
     }
 }
