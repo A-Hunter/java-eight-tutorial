@@ -16,6 +16,7 @@ public class Synchronized {
     public static void main(String[] args) {
         testSyncIncrement();
         testNonSyncIncrement();
+        testSynchIncrement();
     }
 
     private static void testSyncIncrement(){
@@ -36,11 +37,26 @@ public class Synchronized {
         System.out.println("NonSync : " + count);
     }
 
+    private static void testSynchIncrement(){
+        count = 0;
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        IntStream.range(0, NUM_INCREMENTS)
+                .forEach( i -> executor.submit(Synchronized::incrementSynch));
+        executor.shutdown();
+        System.out.println("Synch : " + count);
+    }
+
     private static synchronized void incrementSync(){
         count = count + 1;
     }
 
     private static void increment(){
         count = count + 1;
+    }
+
+    private static void incrementSynch(){
+        synchronized (Synchronized.class){
+            count = count + 1;
+        }
     }
 }
