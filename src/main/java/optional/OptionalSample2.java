@@ -32,9 +32,10 @@ public class OptionalSample2 {
         test3();
     }
 
-    private static Optional resolve(Supplier resolver){
+    private static Optional resolve(Supplier supplier){
+        //Supplier : the type of results supplied by this supplier
         try{
-            Object result = resolver.get();
+            Object result = supplier.get();
             return Optional.ofNullable(result);
         }catch (NullPointerException e){
             return Optional.empty();
